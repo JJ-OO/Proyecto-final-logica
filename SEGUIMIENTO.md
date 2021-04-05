@@ -3,8 +3,13 @@
 
 ## 05/04/2021
 ### ¿Qué hemos hecho? 
+  Crear el repositorio, el archivo de seguimiento y la personalización del README.md.
+
 ### ¿Qué vamos a hacer? 
+  Crear el programa base. 
+  
 ### ¿Qué dificultades hemos tenido? 
+  Nínguna en particular
 
 ## 07/04/2021
 ### ¿Qué hemos hecho? 
