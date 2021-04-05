@@ -9,4 +9,4 @@ Este es un proyecto que se llevará a cabo dentro de un proyecto de 5 semanas, a
 - Valeria Serna Zuluaga.
 
 ### Recursos
-- [Ejemplo](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#links)
+- [Cheat sheet para la personalizacion de .md](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#links)
