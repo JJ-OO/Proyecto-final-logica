@@ -2,7 +2,7 @@
 
 ## Descripción
 El profesor aun está próximo a darnos una tematica o el enunciado. 
-Este es un proyecto que se llevará a cabo dentro de un proyecto de 5 semanas, aproximadamente. En este proyecto se hará con base a los conocimientos obtenidos en el curso "Lógica de programnmación" 2021 - 1
+Este es un proyecto que se llevará a cabo dentro de un proyecto de 5 semanas, aproximadamente. En este proyecto se hará con base a los conocimientos obtenidos en el curso "Lógica de programnmación" 2021 - 1.
 
 ### Integrantes 
 - Johana Patricia Jaramillo Espinosa. 
