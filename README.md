@@ -5,8 +5,8 @@ El profesor aun está próximo a darnos una tematica o el enunciado.
 Este es un proyecto que se llevará a cabo dentro de un proyecto de 5 semanas, aproximadamente. En este proyecto se hará con base a los conocimientos obtenidos en el curso "Lógica de programnmación" 2021 - 1
 
 ### Integrantes 
-- Johana Jaramillo
-- Valeria Serna
+- Johana Patricia Jaramillo Espinosa. 
+- Valeria Serna Zuluaga.
 
 ### Recursos
 - [Ejemplo](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#links)
