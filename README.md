@@ -1,6 +1,6 @@
 # Proyecto final de lógica
 ## Descripción
-###Integrantes 
+### Integrantes 
 - Johana Jaramillo
 - Valeria Serna
 
