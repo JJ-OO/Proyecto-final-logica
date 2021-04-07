@@ -12,9 +12,15 @@
   Nínguna en particular
 
 ## 07/04/2021
-### ¿Qué hemos hecho? 
+### ¿Qué hemos hecho?
+  Valeria hizo un commit actualizando el archivo de seguimiento con respecto a lo hecho el día de hoy, también aprendimos a clonar un repositorio y a hacer commits.
+  
 ### ¿Qué vamos a hacer? 
-### ¿Qué dificultades hemos tenido? 
+  Agregaremos imagenes y emojis utilizando markdon al archivo README.
+
+### ¿Qué dificultades hemos tenido?
+  Valeria no aparecía como contribuidor en el repositorio y aún no se nos ha dado la tematica para poder empezar a hacer el programa base. 
+   
 
 ## 12/04/2021
 ### ¿Qué hemos hecho? 
