@@ -24,9 +24,14 @@
 ## 08/04/2021
 ### ¿Qué hemos hecho?
   Hoy aprendimos a agregar imagenes y emojis al repositorio usando markdown, Johana agrego un emoji al lado de su nombre y una imagen en un nuevo apartado que hizo llamado  "IMAGENES", Valeria agrego un emoji al lado de su nombre y una imagen en el nuevo apartado.
-### ¿Qué vamos a hacer?
-### ¿Qué dificultades hemos tenido?
+  Valeria vinculo su cuenta de github, ya que previamente los commits que realizaba aparecía que fuesen hechos por terceros (Personas sin cuenta de github).
 
+### ¿Qué vamos a hacer?
+  Proximo a definir.
+  
+### ¿Qué dificultades hemos tenido?
+  Valeria no tenía vinculada su cueta de github, por lo tanto los commits que realizaba aparecían hechos por terceros.
+  
 ## 12/04/2021
 ### ¿Qué hemos hecho? 
 ### ¿Qué vamos a hacer? 
