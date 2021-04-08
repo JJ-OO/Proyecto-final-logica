@@ -6,7 +6,7 @@ Este es un proyecto que se llevará a cabo dentro de un proyecto de 5 semanas, a
 
 ### Integrantes 
 - Johana Patricia Jaramillo Espinosa. :anguished:
-- Valeria Serna Zuluaga. :satisfied:
+- Valeria Serna Zuluaga. :sleeping:   
 
 ### Recursos
 - [Cheat sheet para la personalizacion de Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#links)
@@ -15,5 +15,6 @@ Este es un proyecto que se llevará a cabo dentro de un proyecto de 5 semanas, a
 ### Imagenes: 
 
 ![Imagen-johana](https://i.pinimg.com/originals/f0/51/0b/f0510b3bc999cc51a8555a2bf4f7d103.jpg)
+![Imagen-valeria](https://data.whicdn.com/images/349119548/original.jpg)
 
 
