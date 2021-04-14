@@ -33,9 +33,14 @@
   Valeria no tenía vinculada su cueta de github, por lo tanto los commits que realizaba aparecían hechos por terceros.
   
 ## 12/04/2021
-### ¿Qué hemos hecho? 
+### ¿Qué hemos hecho?
+  Hoy participamos añadiendo una canción de rock en español con el formato midi y su respectiva letra al repositorio creado por el profesor. 
+
 ### ¿Qué vamos a hacer? 
-### ¿Qué dificultades hemos tenido? 
+   Propondremos ideas para hacer uso de la idea planteada en clase acerca del proyecto en parejas.
+
+### ¿Qué dificultades hemos tenido?
+  No hemos tenido ninguna dificultad. 
 
 ## 14/04/2021
 ### ¿Qué hemos hecho? 
