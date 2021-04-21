@@ -42,20 +42,15 @@
 ### ¿Qué dificultades hemos tenido?
   No hemos tenido ninguna dificultad. 
 
-## 14/04/2021
+## 20/04/2021
 ### ¿Qué hemos hecho? 
-### ¿Qué vamos a hacer? 
-### ¿Qué dificultades hemos tenido? 
+	Finalmente, decidimos hacer un bot de discord con Java y JDA que funcione como una rocola en el servidor donde se use, que envie una lista de canciones, el usurio selecciona una, empieza a sonar la cación y a su vez se envia la letra de dicha canción en el canal donde se envió el comando. 
 
-## 19/04/2021
-### ¿Qué hemos hecho? 
 ### ¿Qué vamos a hacer? 
-### ¿Qué dificultades hemos tenido? 
+	Crear el bot base e informarnos de como funciona, ademas de definir lo que va hacer el bot especificamente en calidad de comandos una vez nos hayamos informado de como funciona la "base de datos" que proporciona la musica de este bot. 
 
-## 21/04/2021
-### ¿Qué hemos hecho? 
-### ¿Qué vamos a hacer? 
 ### ¿Qué dificultades hemos tenido? 
+	No pudimos definir que hará el bot de manera especifica ya que no tenemos conocimiento de que puede hacer el programa externo que proporciona la musica y las letras.  
 
 ## 29/04/2021
 ### ¿Qué hemos hecho? 
