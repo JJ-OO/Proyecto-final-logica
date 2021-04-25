@@ -1,0 +1,5 @@
+¿Entonces, qué nos falta? 25/04
+- Funcion que guarde los nombres de todas las canciones en un array.
+- Funcion que obtenga los datos que ingrese el usuario. 
+- Funcion que reproduzca el archivo mid.
+- Basicamente todo el apartado de letras, del cual no sabemos nada. 

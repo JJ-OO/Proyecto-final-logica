@@ -1,24 +1,41 @@
 public class Proyecto {
-
-	public static int aleatorio(int n){
-		return (int)Math.round(Math.floor(Math.random()*n)+1);
+	{
+	//1mero: necesitamos una funcion que nos de el nombre de todas las canciones
+	//si son muchas canciones, necesitariamos una funcion que busque la cancion por el nombre, en general de ser el caso deberiamos cambiar parte de la estructura
 	}
-
 	public static void menu(){
-		
-		int opc;
+		int cancion_elegida;
+		String[] canciones = canciones_funcion();  //aca se deberia estar llamando a la funcion que 
+												   //nos obtenga los nombres de las canciones en un array
 		do{
+			System.out.println("------------------------------");
+			System.out.println("----Bienvenido a la rockola---");
+			System.out.println("-------Elija una cancion------");
+			System.out.println("------------------------------");
 
+			for (int i = 0; i < canciones.length; i++){			//este for complementaria el menu dando la lista de canciones
+				System.out.println(i + ". " + canciones[i]);
+			}
+		
+		cancion_elegida = 0; //acá el se deberia leer el comando del usuario con la cancion (1,2,3...?)
 
-		System.out.println("Ingrese una opción así");
-		System.out.println("1. sumar");
-		System.out.println("2. restar");
-		System.out.println("3. Multiplicar");
-		System.out.println("4. Salir");
-		opc = 3;
-	}while(opc!=4);
+		}while(cancion_elegida != canciones.length);
 
-	System.out.println(aleatorio(4));
+		System.out.println("------------------------------"); //Esto cierra el menu 
 
 	}
+
+	public static void main(String[] args) {
+		menu();
+
+		canciones[cancion_elegida].play()//esto NO es una funcion real, este es el nombre de la cancion que se va a reproducir
+										 //el profesor nor dará una funcion para eso
+
+		//también, necesitariamos TODO el apartado de la funcion de mostrar la letra.
+		//Pero, de nuevo, eso nos lo iba a enseñar el profe. 
+
+		//ESTE CODIGO NO COMPILA tiene funciones y cosas que generan multiples errores
+		//y que basicamente faltan la mitad de las funciones
+	}
+
 }
