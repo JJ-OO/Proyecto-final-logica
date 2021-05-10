@@ -47,8 +47,8 @@ public class Audio extends Thread{
 	        }
 		}
 		else{
-			System.out.println("Hay un archivo actualmente en reproducci\u00f3n");
-			System.out.println("Detenga la canci\u00f3n y seleccione una nueva");
+			System.out.println("Oops! parece que no has detenido la canción anterior:(");
+			System.out.println("Ingresa !STOP e intentalo de nuevo :D!");
 		}
 	}
 

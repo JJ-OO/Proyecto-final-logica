@@ -170,7 +170,6 @@ public class Programa{
 						imprimir("Nombre: "+info_canciones[indice_cancion][ConsoleData.NOMBRE_CANCION]);
 						imprimir("Autor: "+info_canciones[indice_cancion][ConsoleData.AUTOR_CANCION]);
 						imprimir("Archivo: "+info_canciones[indice_cancion][ConsoleData.RUTA_CANCION]);
-
 						imprimir("Primera estrofa: "+canciones[inicio_letra]);
 						imprimir("Última estrofa: "+canciones[fin_letra]);
 						} break;
@@ -205,13 +204,24 @@ public class Programa{
 						}
 						break;
 					}
+					case "!AGAIN": {
+
+						if (indice_cancion==900) {
+							imprimir("No has reproducido ninguna cancion :( usa el comando '!play' para empezar!");
+						}else{
+							imprimir("Tu ultima cancion fue: "+info_canciones[indice_cancion][ConsoleData.NOMBRE_CANCION] + " - " + info_canciones[indice_cancion][ConsoleData.AUTOR_CANCION]);
+							audio.seleccionarCancion(info_canciones[indice_cancion][ConsoleData.RUTA_CANCION]);
+							audio.reproducir(); 			
+						}
+						break;
+					}
 					case "!EXIT": {
-						System.out.println("Adios!");
+						System.out.println("Espero que nos encontremos pronto, hasta luego!");
 						salida = 1; 
 						break;
 					}
 					default:
-						imprimir("Eso no es un comando");
+						imprimir("Esto no es un comando, usa !HELP para tener una lista detallada de ellos!");
 				}
 			}while(salida != 1);
 		}
