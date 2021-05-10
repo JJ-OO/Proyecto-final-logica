@@ -77,30 +77,8 @@ public class Programa{
 	}
 
 	public static void menu(){
-		System.out.println("	 __________________________________________________________________");
-		System.out.println("	|                              _     _                             |");
-		System.out.println("	|                             ( \\---/ )                            |");
-		System.out.println("	|                              ) . . (                             |");
-		System.out.println("	|________________________,--._(___Y___)_,--.____________________hjw|");
-		System.out.println("	|                        `--'           `--'                       |");
-		System.out.println("	|		                  _   _  __                        |");
-		System.out.println("	|		                 | | (_)/ _|                       |");
-		System.out.println("	|		  ___ _ __   ___ | |_ _| |_ _   _                  |");
-		System.out.println("	|		 / __| '_ \\ / _ \\| __| |  _| | | |                 |");
-		System.out.println("	|		 \\__ \\ |_) | (_) | |_| | | | |_| |                 |");
-		System.out.println("	|		 |___/ .__/ \\___/ \\__|_|_|  \\__, |                 |");
-		System.out.println("	|		     | |                     __/ |                 |");
-		System.out.println("	|		     |_|                    |___/                  |");
-				  imprimir("	|                                                          	   |");
-				  imprimir("	|                    Ingrese una opción así:		 	   |");
-				  imprimir("	|                    1. Buscar canción			 	   |");
-				  imprimir("	|                    2. Reproducir canción			   |");
-				  imprimir("	|                    3. Mostrar Letra				   |");
-				  imprimir("	|                    4. Detener Canción				   |");
-				  imprimir("	|                    5. Imprimir lista de Canciones		   |");
-				  imprimir("	|                    6. Salir					   |");
-		System.out.println("	|__________________________________________________________________|");
-		System.out.print("	Spotify$:");
+			//menu
+		System.out.print("	Entrada$:");
 	}
 
 	public static void main(String[] args) {
@@ -115,6 +93,7 @@ public class Programa{
 		String [] canciones;
 		String [][] info_canciones;
 		StringBuilder letra_cancion;
+		String letra = "";
 
 		canciones = ConsoleFile.readBigFile("recursos/letras.csv");
 		info_canciones = ConsoleData.dataList(canciones);
@@ -146,8 +125,13 @@ public class Programa{
 						fin_letra = ConsoleInput.stringToInt(info_canciones[indice_cancion][ConsoleData.FIN_CANCION]);
 						
 						letra_cancion = obtenerLetraCancion(inicio_letra,fin_letra,canciones);
+						letra = letra_cancion.toString();
+						letra = letra.replace(";", " ");
+						letra = letra.replace("--", "  ");
 
-						imprimir(letra_cancion.toString());	
+						imprimir("Canción: ");
+						imprimir("-------- " + info_canciones[indice_cancion][ConsoleData.NOMBRE_CANCION] + " - " + info_canciones[indice_cancion][ConsoleData.AUTOR_CANCION] + " ---------");
+						imprimir(letra);
 
 						break;
 					}
@@ -165,14 +149,14 @@ public class Programa{
 						fin_letra = ConsoleInput.stringToInt(info_canciones[indice_cancion][ConsoleData.FIN_CANCION]);
 
 						System.out.println();
-						imprimir("Inicio letra "+inicio_letra);
-						imprimir("Fin letra "+fin_letra);
 						imprimir("Nombre: "+info_canciones[indice_cancion][ConsoleData.NOMBRE_CANCION]);
 						imprimir("Autor: "+info_canciones[indice_cancion][ConsoleData.AUTOR_CANCION]);
+						imprimir("Album: "+info_canciones[indice_cancion][ConsoleData.ALBUM]);
+						imprimir("Año: "+info_canciones[indice_cancion][ConsoleData.FECHA]);
 						imprimir("Archivo: "+info_canciones[indice_cancion][ConsoleData.RUTA_CANCION]);
-						imprimir("Primera estrofa: "+canciones[inicio_letra]);
-						imprimir("Última estrofa: "+canciones[fin_letra]);
-						} break;
+
+						break;
+					} 
 
 					case "!HELP": {
 						imprimir("----Detalles de los comandos-----");
@@ -189,18 +173,45 @@ public class Programa{
 						imprimir("---!HELP, imprime una lista de los comandos existentes");
 						break;
 					}  
+					case "!NP": {
+
+						if (indice_cancion==900) {
+							
+							imprimir("No has reproducido ninguna canción :(, ingresa '!PLAY' para iniciar!");
+						
+						}else{
+
+							System.out.println();
+							imprimir("Actualmente estás escuchando ");
+							System.out.println();
+							imprimir("Nombre: "+info_canciones[indice_cancion][ConsoleData.NOMBRE_CANCION]);
+							imprimir("Autor: "+info_canciones[indice_cancion][ConsoleData.AUTOR_CANCION]);
+							imprimir("Album: "+info_canciones[indice_cancion][ConsoleData.ALBUM]);
+							imprimir("Año: "+info_canciones[indice_cancion][ConsoleData.FECHA]);
+							imprimir("Archivo: "+info_canciones[indice_cancion][ConsoleData.RUTA_CANCION]);
+
+						}
+						break;
+					}
 					case "!CL": {
 						
 						if (indice_cancion==900) {
+
 							imprimir("No estas reproduciendo ninguna cancion :( usa el comando '!play' para empezar!");
 						
 						} else {
 
 							inicio_letra = ConsoleInput.stringToInt(info_canciones[indice_cancion][ConsoleData.INICIO_CANCION]);
 							fin_letra = ConsoleInput.stringToInt(info_canciones[indice_cancion][ConsoleData.FIN_CANCION]);
+							
 							letra_cancion = obtenerLetraCancion(inicio_letra,fin_letra,canciones);
+							letra = letra_cancion.toString();
+							letra = letra.replace(";", " ");
+							letra = letra.replace("--", "  ");
 
-							imprimir(letra_cancion.toString());	
+							imprimir("Canción: ");
+							imprimir("-------- " + info_canciones[indice_cancion][ConsoleData.NOMBRE_CANCION] + " - " + info_canciones[indice_cancion][ConsoleData.AUTOR_CANCION] + " ---------");
+							imprimir(letra);
 						}
 						break;
 					}
