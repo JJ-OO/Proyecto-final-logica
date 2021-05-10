@@ -178,7 +178,7 @@ public class Programa{
 						imprimir("----Detalles de los comandos-----");
 						imprimir("---!PLAY, reproduce la cancion seleccionada, recuerde que esta no tiene voz");
 						imprimir("---!STOP, detiene la cancion que se está reproduciendo");
-						imprimir("---!AGAIN, vuelve a reproducir la cancion anterior");
+						imprimir("---!AGAIN, vuelve a reproducir la cancion anterior y/o vuelve a empezar desde el inicio");
 						imprimir("---!RANDOM, reproduce un segmento aleatorio de la canción");   
 						imprimir("---!NP,(Now Playing) imprime la informacion de la cancion que se está reproduciendo junto a su minuto");
 						imprimir("---!LYRICS, muestra la letra de una canción seleccionada");
@@ -209,7 +209,9 @@ public class Programa{
 						if (indice_cancion==900) {
 							imprimir("No has reproducido ninguna cancion :( usa el comando '!play' para empezar!");
 						}else{
-							imprimir("Tu ultima cancion fue: "+info_canciones[indice_cancion][ConsoleData.NOMBRE_CANCION] + " - " + info_canciones[indice_cancion][ConsoleData.AUTOR_CANCION]);
+							audio.detener();
+							imprimir("Tu última canción fue: "+info_canciones[indice_cancion][ConsoleData.NOMBRE_CANCION] + " - " + info_canciones[indice_cancion][ConsoleData.AUTOR_CANCION]);
+							imprimir("Disfrutala de nuevo!");
 							audio.seleccionarCancion(info_canciones[indice_cancion][ConsoleData.RUTA_CANCION]);
 							audio.reproducir(); 			
 						}
