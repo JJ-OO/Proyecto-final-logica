@@ -44,13 +44,23 @@
 
 ## 20/04/2021
 ### ¿Qué hemos hecho? 
-Finalmente, decidimos hacer un bot de discord con Java y JDA que funcione como una rocola en el servidor donde se use, que envie una lista de canciones, el usurio selecciona una, empieza a sonar la cación y a su vez se envia la letra de dicha canción en el canal donde se envió el comando. 
+  Finalmente, decidimos hacer un bot de discord con Java y JDA que funcione como una rocola en el servidor donde se use, que envie una lista de canciones, el usurio selecciona una, empieza a sonar la cación y a su vez se envia la letra de dicha canción en el canal donde se envió el comando. 
 
 ### ¿Qué vamos a hacer? 
-Crear el bot base e informarnos de como funciona, ademas de definir lo que va hacer el bot especificamente en calidad de comandos una vez nos hayamos informado de como funciona la "base de datos" que proporciona la musica de este bot. 
+  Crear el bot base e informarnos de como funciona, ademas de definir lo que va hacer el bot especificamente en calidad de comandos una vez nos hayamos informado de como funciona la "base de datos" que proporciona la musica de este bot. 
 
 ### ¿Qué dificultades hemos tenido? 
-No pudimos definir que hará el bot de manera especifica ya que no tenemos conocimiento de que puede hacer el programa externo que proporciona la musica y las letras.  
+  No pudimos definir que hará el bot de manera especifica ya que no tenemos conocimiento de que puede hacer el programa externo que proporciona la musica y las letras.  
+
+## 25/04/2021
+### ¿Qué hemos hecho?
+  Hoy decidimos comenzar el progama base, hicimos un menu teniendo en cuenta el ejemplo del profesor en la anterior clase y definimos las funciones que necesitamos. 
+ 
+### ¿Qué vamos a hacer?
+   Esperar a la siguiente clase en las que se expliquen nuevas funciones y aplicarlas en el programa base.
+
+### ¿Qué dificultades hemos tenido? 
+  No sabiamos muchas de las funciones que necesitamos para hacer el programa.
 
 ## 03/05/2021
 ### ¿Qué hemos hecho? 
@@ -71,3 +81,5 @@ Añadir las funcionalidades extra y anexar una interfaz gráfica correspondiente
 
 ### ¿Qué dificultades hemos tenido? 
 Hemos tenido problemas actualizando este documento. 
+
+
