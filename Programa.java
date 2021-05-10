@@ -108,8 +108,9 @@ public class Programa{
 		//AnsiConsole.systemInstall();
 		
 		Audio audio = new Audio();
-		String centinela = "";	
-		int indice_cancion = 0;
+		String centinela = "";
+		int salida = 0;	
+		int indice_cancion = 900;
 		int inicio_letra = 0, fin_letra = 0;
 		String [] canciones;
 		String [][] info_canciones;
@@ -128,7 +129,7 @@ public class Programa{
        			centinela = ConsoleInput.getString();
 
 				switch(centinela) {
-					case "!play": {
+					case "!PLAY": {
 						imprimir("Ingrese indice de la cancion, entre 0 y "+(info_canciones.length-1));
 						indice_cancion = ConsoleInput.getInt();
 						audio.seleccionarCancion(info_canciones[indice_cancion][ConsoleData.RUTA_CANCION]);
@@ -136,7 +137,7 @@ public class Programa{
 						break;
 					} 
 
-					case "!Lyrics": {
+					case "!LYRICS": {
 
 						imprimir("Ingrese indice de la cancion, entre 0 y "+(info_canciones.length-1));
 						indice_cancion = ConsoleInput.getInt();
@@ -151,12 +152,12 @@ public class Programa{
 						break;
 					}
 
-					case "!Stop": {
+					case "!STOP": {
 						audio.detener();
 						break;
 					} 
 
-					case "!Info": {
+					case "!INFO": {
 						imprimir("Ingrese indice de la cancion, entre 0 y "+(info_canciones.length-1));
 						indice_cancion = ConsoleInput.getInt();
 
@@ -174,24 +175,45 @@ public class Programa{
 						imprimir("Última estrofa: "+canciones[fin_letra]);
 						} break;
 
-					case "!help": {
+					case "!HELP": {
 						imprimir("----Detalles de los comandos-----");
-						imprimir("---!Play, reproduce la cancion seleccionada, recuerde que esta no tiene voz");
-						imprimir("---!Stop, detiene la cancion que se está reproduciendo");
-						imprimir("---!Again, vuelve a reproducir la cancion anterior");
-						imprimir("---!Random, reproduce un segmento aleatorio de la canción");   
-						imprimir("---!NP, imprime la informacion de la cancion que se está reproduciendo junto a su minuto");
-						imprimir("---!Lyrics, muestra la letra de una canción seleccionada");
-						imprimir("---!AL, (Actual Lyrics) muesta la letra de la canción que se está reproduciendo");
-						imprimir("---!Info, muestra la informacion de la canción");
-						imprimir("---!List, muestra la lista de canciones");
-						imprimir("---!Exit, sales de *inserte el nombre del bot* :(");
+						imprimir("---!PLAY, reproduce la cancion seleccionada, recuerde que esta no tiene voz");
+						imprimir("---!STOP, detiene la cancion que se está reproduciendo");
+						imprimir("---!AGAIN, vuelve a reproducir la cancion anterior");
+						imprimir("---!RANDOM, reproduce un segmento aleatorio de la canción");   
+						imprimir("---!NP,(Now Playing) imprime la informacion de la cancion que se está reproduciendo junto a su minuto");
+						imprimir("---!LYRICS, muestra la letra de una canción seleccionada");
+						imprimir("---!CL, (Current Lyrics) muesta la letra de la canción que se está reproduciendo");
+						imprimir("---!INFO, muestra la informacion de la canción");
+						imprimir("---!LIST, muestra la lista de canciones");
+						imprimir("---!EXIT, sales de *inserte el nombre del bot* :(");
+						imprimir("---!HELP, imprime una lista de los comandos existentes");
 						break;
 					}  
+					case "!CL": {
+						
+						if (indice_cancion==900) {
+							imprimir("No estas reproduciendo ninguna cancion :( usa el comando '!play' para empezar!");
+						
+						} else {
+
+							inicio_letra = ConsoleInput.stringToInt(info_canciones[indice_cancion][ConsoleData.INICIO_CANCION]);
+							fin_letra = ConsoleInput.stringToInt(info_canciones[indice_cancion][ConsoleData.FIN_CANCION]);
+							letra_cancion = obtenerLetraCancion(inicio_letra,fin_letra,canciones);
+
+							imprimir(letra_cancion.toString());	
+						}
+						break;
+					}
+					case "!EXIT": {
+						System.out.println("Adios!");
+						salida = 1; 
+						break;
+					}
 					default:
 						imprimir("Eso no es un comando");
 				}
-			}while(centinela != "!exit");
+			}while(salida != 1);
 		}
 		catch(Exception e)
 		{
