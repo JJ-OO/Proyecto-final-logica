@@ -52,7 +52,22 @@ Crear el bot base e informarnos de como funciona, ademas de definir lo que va ha
 ### ¿Qué dificultades hemos tenido? 
 No pudimos definir que hará el bot de manera especifica ya que no tenemos conocimiento de que puede hacer el programa externo que proporciona la musica y las letras.  
 
-## 29/04/2021
+## 03/05/2021
 ### ¿Qué hemos hecho? 
+Enviamos la ruta de la letra al repositorio del profesor y adquirimos conocimiento acerca de que podiamos hacer con el bot, definimos parte de sus funciones como bot de musica y como emplear algunas de las funciones proporcionadas por el maestro 
+
 ### ¿Qué vamos a hacer? 
+Diseño de la interfaz gráfica con base a lo proporcionado en clase. Y, en pocas palabras, lo que vienen siendo las funciones iniciales del bot. 
+
 ### ¿Qué dificultades hemos tenido? 
+Nos vimos estancadas gracias a lo completo que se encuentra el programa base que nos dio el profesor. 
+
+## 08/05/2021
+### ¿Qué hemos hecho? 
+Nos apropiamos de los documentos del repositorio del maestro para poder hacer uso de ellos, definimos finalmente que serian las acciones que realizrá el bot. Modificamos el documento inicial para que el programa se ejecute con comandos en vez numeros, los comandos tienen un prefijo, el cual es una caracteristica de los bots de discord. 
+
+### ¿Qué vamos a hacer? 
+Añadir las funcionalidades extra y anexar una interfaz gráfica correspondiente. 
+
+### ¿Qué dificultades hemos tenido? 
+Hemos tenido problemas actualizando este documento. 
