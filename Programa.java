@@ -108,31 +108,63 @@ public class Programa{
        			centinela = ConsoleInput.getString();
 
 				switch(centinela) {
+
 					case "!PLAY": {
-						imprimir("Ingrese indice de la cancion, entre 0 y "+(info_canciones.length-1));
+						imprimir("Ingresa el número de la canción!");
+						
+						System.out.println();
+
+						for(int i = 0 ; i<info_canciones.length; i++){
+							indice_cancion = i;
+							imprimir(i + ". "  +info_canciones[indice_cancion][ConsoleData.NOMBRE_CANCION] + " - " + info_canciones[indice_cancion][ConsoleData.AUTOR_CANCION]);
+						}
+
+						System.out.println();
 						indice_cancion = ConsoleInput.getInt();
-						audio.seleccionarCancion(info_canciones[indice_cancion][ConsoleData.RUTA_CANCION]);
-						audio.reproducir(); 
+						System.out.println();
+
+						if (indice_cancion>info_canciones.length || indice_cancion<0){
+							imprimir("Parece que no agregaste un valor valido! ingresa '!PLAY' e intentalo de nuevo ;)");
+						}else{
+							imprimir("Ingresaste " + info_canciones[indice_cancion][ConsoleData.NOMBRE_CANCION] + " - " + info_canciones[indice_cancion][ConsoleData.AUTOR_CANCION] + ". Disfrutala!");
+							audio.seleccionarCancion(info_canciones[indice_cancion][ConsoleData.RUTA_CANCION]);
+							audio.reproducir(); 
+						}	
 						break;
 					} 
 
 					case "!LYRICS": {
 
-						imprimir("Ingrese indice de la cancion, entre 0 y "+(info_canciones.length-1));
-						indice_cancion = ConsoleInput.getInt();
-
-						inicio_letra = ConsoleInput.stringToInt(info_canciones[indice_cancion][ConsoleData.INICIO_CANCION]);
-						fin_letra = ConsoleInput.stringToInt(info_canciones[indice_cancion][ConsoleData.FIN_CANCION]);
+						imprimir("Ingresa el número de la canción!");
 						
-						letra_cancion = obtenerLetraCancion(inicio_letra,fin_letra,canciones);
-						letra = letra_cancion.toString();
-						letra = letra.replace(";", " ");
-						letra = letra.replace("--", "  ");
+						for(int i = 0 ; i<info_canciones.length; i++){
+							indice_cancion = i;
+							imprimir(i + ". "  +info_canciones[indice_cancion][ConsoleData.NOMBRE_CANCION] + " - " + info_canciones[indice_cancion][ConsoleData.AUTOR_CANCION]);
+						}
+						
+						System.out.println();
 
-						imprimir("Canción: ");
-						imprimir("-------- " + info_canciones[indice_cancion][ConsoleData.NOMBRE_CANCION] + " - " + info_canciones[indice_cancion][ConsoleData.AUTOR_CANCION] + " ---------");
-						imprimir(letra);
 
+						indice_cancion = ConsoleInput.getInt();
+						if (indice_cancion>info_canciones.length || indice_cancion<0){
+							imprimir("Parece que no agregaste un valor valido! ingresa '!LYRICS' e intentalo de nuevo ;)");
+						}else{
+							inicio_letra = ConsoleInput.stringToInt(info_canciones[indice_cancion][ConsoleData.INICIO_CANCION]);
+							fin_letra = ConsoleInput.stringToInt(info_canciones[indice_cancion][ConsoleData.FIN_CANCION]);
+							
+							letra_cancion = obtenerLetraCancion(inicio_letra,fin_letra,canciones);
+							letra = letra_cancion.toString();
+							letra = letra.replace(";", " ");
+							letra = letra.replace("--", "  ");
+							System.out.println();
+							imprimir("Canción: ");
+							System.out.println();
+							
+							imprimir("-------- " + info_canciones[indice_cancion][ConsoleData.NOMBRE_CANCION] + " - " + info_canciones[indice_cancion][ConsoleData.AUTOR_CANCION] + " ---------");
+							System.out.println();
+							imprimir(letra);
+
+						}
 						break;
 					}
 
@@ -142,19 +174,33 @@ public class Programa{
 					} 
 
 					case "!INFO": {
-						imprimir("Ingrese indice de la cancion, entre 0 y "+(info_canciones.length-1));
+						imprimir("Ingresa el número de la canción de la cual quieres saber más!");
+
+						for(int i = 0 ; i<info_canciones.length; i++){
+							indice_cancion = i;
+							imprimir(i + ". "  +info_canciones[indice_cancion][ConsoleData.NOMBRE_CANCION] + " - " + info_canciones[indice_cancion][ConsoleData.AUTOR_CANCION]);
+						}
+
 						indice_cancion = ConsoleInput.getInt();
 
-						inicio_letra = ConsoleInput.stringToInt(info_canciones[indice_cancion][ConsoleData.INICIO_CANCION]);
-						fin_letra = ConsoleInput.stringToInt(info_canciones[indice_cancion][ConsoleData.FIN_CANCION]);
+						if (indice_cancion>info_canciones.length || indice_cancion<0){
+							imprimir("Parece que no agregaste un valor valido! ingresa '!INFO' e intentalo de nuevo ;)");
+						
+						}else{
+						
+							inicio_letra = ConsoleInput.stringToInt(info_canciones[indice_cancion][ConsoleData.INICIO_CANCION]);
+							fin_letra = ConsoleInput.stringToInt(info_canciones[indice_cancion][ConsoleData.FIN_CANCION]);
 
-						System.out.println();
-						imprimir("Nombre: "+info_canciones[indice_cancion][ConsoleData.NOMBRE_CANCION]);
-						imprimir("Autor: "+info_canciones[indice_cancion][ConsoleData.AUTOR_CANCION]);
-						imprimir("Album: "+info_canciones[indice_cancion][ConsoleData.ALBUM]);
-						imprimir("Año: "+info_canciones[indice_cancion][ConsoleData.FECHA]);
-						imprimir("Archivo: "+info_canciones[indice_cancion][ConsoleData.RUTA_CANCION]);
+							System.out.println();
+							imprimir("Nombre: "+info_canciones[indice_cancion][ConsoleData.NOMBRE_CANCION]);
+							imprimir("Autor: "+info_canciones[indice_cancion][ConsoleData.AUTOR_CANCION]);
+							imprimir("Album: "+info_canciones[indice_cancion][ConsoleData.ALBUM]);
+							imprimir("Año: "+info_canciones[indice_cancion][ConsoleData.FECHA]);
+							imprimir("Archivo: "+info_canciones[indice_cancion][ConsoleData.RUTA_CANCION]);
 
+							indice_cancion = 900;
+						}
+						
 						break;
 					} 
 
@@ -193,6 +239,7 @@ public class Programa{
 						}
 						break;
 					}
+
 					case "!CL": {
 						
 						if (indice_cancion==900) {
@@ -210,11 +257,14 @@ public class Programa{
 							letra = letra.replace("--", "  ");
 
 							imprimir("Canción: ");
+							System.out.println();
 							imprimir("-------- " + info_canciones[indice_cancion][ConsoleData.NOMBRE_CANCION] + " - " + info_canciones[indice_cancion][ConsoleData.AUTOR_CANCION] + " ---------");
+							System.out.println();
 							imprimir(letra);
 						}
 						break;
 					}
+
 					case "!AGAIN": {
 
 						if (indice_cancion==900) {
@@ -228,6 +278,16 @@ public class Programa{
 						}
 						break;
 					}
+
+					case "!LIST": {
+						for(int i = 0 ; i<info_canciones.length; i++){
+							indice_cancion = i;
+							imprimir(i + ". "  +info_canciones[indice_cancion][ConsoleData.NOMBRE_CANCION] + " - " + info_canciones[indice_cancion][ConsoleData.AUTOR_CANCION]);
+						}
+						indice_cancion = 900;
+						break;
+					}
+
 					case "!EXIT": {
 						System.out.println("Espero que nos encontremos pronto, hasta luego!");
 						salida = 1; 
