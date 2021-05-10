@@ -159,7 +159,7 @@ public class Programa{
 							System.out.println();
 							imprimir("Canción: ");
 							System.out.println();
-							
+
 							imprimir("-------- " + info_canciones[indice_cancion][ConsoleData.NOMBRE_CANCION] + " - " + info_canciones[indice_cancion][ConsoleData.AUTOR_CANCION] + " ---------");
 							System.out.println();
 							imprimir(letra);
@@ -217,8 +217,10 @@ public class Programa{
 						imprimir("---!LIST, muestra la lista de canciones");
 						imprimir("---!EXIT, sales de *inserte el nombre del bot* :(");
 						imprimir("---!HELP, imprime una lista de los comandos existentes");
+						imprimir("---!KARAOKE, inicia la canción y se muestra la letra");
 						break;
 					}  
+
 					case "!NP": {
 
 						if (indice_cancion==900) {
@@ -291,6 +293,44 @@ public class Programa{
 					case "!EXIT": {
 						System.out.println("Espero que nos encontremos pronto, hasta luego!");
 						salida = 1; 
+						break;
+					}
+
+					case "!KARAOKE": {
+						System.out.println();
+						imprimir("Ingrese el indice de la canción!");
+						System.out.println();
+
+						for(int i = 0 ; i<info_canciones.length; i++){
+							indice_cancion = i;
+							imprimir(i + ". "  +info_canciones[indice_cancion][ConsoleData.NOMBRE_CANCION] + " - " + info_canciones[indice_cancion][ConsoleData.AUTOR_CANCION]);
+						}
+
+						indice_cancion = ConsoleInput.getInt();
+
+						if (indice_cancion>info_canciones.length || indice_cancion<0){
+							imprimir("Parece que no agregaste un valor valido! ingresa '!PLAY' e intentalo de nuevo ;)");
+						}else{
+
+							imprimir("Ingresaste " + info_canciones[indice_cancion][ConsoleData.NOMBRE_CANCION] + " - " + info_canciones[indice_cancion][ConsoleData.AUTOR_CANCION] + ". Disfrutala!");
+							audio.seleccionarCancion(info_canciones[indice_cancion][ConsoleData.RUTA_CANCION]);
+							audio.reproducir(); 
+
+							inicio_letra = ConsoleInput.stringToInt(info_canciones[indice_cancion][ConsoleData.INICIO_CANCION]);
+							fin_letra = ConsoleInput.stringToInt(info_canciones[indice_cancion][ConsoleData.FIN_CANCION]);
+							
+							letra_cancion = obtenerLetraCancion(inicio_letra,fin_letra,canciones);
+							letra = letra_cancion.toString();
+							letra = letra.replace(";", " ");
+							letra = letra.replace("--", "  ");
+
+							imprimir("\n-------- " + info_canciones[indice_cancion][ConsoleData.NOMBRE_CANCION] + " - " + info_canciones[indice_cancion][ConsoleData.AUTOR_CANCION] + " ---------");
+							System.out.println();
+							imprimir(letra);
+						}
+
+
+
 						break;
 					}
 					default:
