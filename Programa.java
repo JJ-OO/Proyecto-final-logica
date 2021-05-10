@@ -125,8 +125,7 @@ public class Programa{
 				System.out.println();
 				menu();
 
-    			Scanner answer = new Scanner(System.in);
-    			centinela = answer.next();
+       			centinela = ConsoleInput.getString();
 
 				switch(centinela) {
 					case "!play": {
@@ -138,6 +137,7 @@ public class Programa{
 					} 
 
 					case "!Lyrics": {
+
 						imprimir("Ingrese indice de la cancion, entre 0 y "+(info_canciones.length-1));
 						indice_cancion = ConsoleInput.getInt();
 
