@@ -146,8 +146,7 @@ public class Programa{
 		info_canciones = ConsoleData.dataList(canciones);
 
 		try{
-				//TODO: Ojo falta validar la entrada de datos
-				//TODO: Recuerde usar el helper ConsoleInput y validar
+				
     		do{	
 				System.out.println();
 				menu();
@@ -256,7 +255,6 @@ public class Programa{
 						imprimir("---!PLAY, reproduce la cancion seleccionada, recuerde que esta no tiene voz");
 						imprimir("---!STOP, detiene la cancion que se está reproduciendo");
 						imprimir("---!AGAIN, vuelve a reproducir la cancion anterior y/o vuelve a empezar desde el inicio");
-						imprimir("---!RANDOM, reproduce un segmento aleatorio de la canción");   
 						imprimir("---!NP,(Now Playing) imprime la informacion de la cancion que se está reproduciendo junto a su minuto");
 						imprimir("---!LYRICS, muestra la letra de una canción seleccionada");
 						imprimir("---!CL, (Current Lyrics) muesta la letra de la canción que se está reproduciendo");
