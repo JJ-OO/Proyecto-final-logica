@@ -38,6 +38,9 @@ public class Programa{
 					      break;
 				case "ñ": caracter = '\u00F1';
 					      break;
+				
+
+
 			}
 			// System.out.println("\\u" + Integer.toHexString('÷' | 0x10000).substring(1));
 			str.replace(indice,indice+1,""+caracter);
@@ -60,6 +63,8 @@ public class Programa{
 		str = convertirUnicode("ó",str);
 		str = convertirUnicode("ú",str);
 		str = convertirUnicode("ñ",str);
+		
+
 
 		System.out.println(str);
 	}
@@ -80,39 +85,47 @@ public class Programa{
 
 			//MENU
 
-			System.out.println(" _____________________________________________________");
-			System.out.println(" | -___                        ___                    | ");
-			System.out.println(" | (   )                      (   )                   |");
-			System.out.println(" |  | |   ___  ___    .--.     | |   ___    ___  ___  |");
-			System.out.println(" |  | |  (   )(   )  /    \\    | |  (   )  (   )(   ) |");
-			System.out.println(" |  | |   | |  | |  |  .-. ;   | |  ' /     | |  | |  |");
-			System.out.println(" |  | |   | |  | |  |  |(___)  | |,' /      | |  | |  |");
-			System.out.println(" |  | |   | |  | |  |  |       | .  '.      | '  | |  |");
-			System.out.println(" |  | |   | |  | |  |  | ___   | | `. \\     '  `-' |  |");
-			System.out.println(" |  | |   | |  ; '  |  '(   )  | |   \\ \\     `.__. |  |");
-			System.out.println(" |  | |   ' `-'  /  '  `-' |   | |    \\ .    ___ | |  |");
-			System.out.println(" | (___)   '.__.'    `.__,'   (___ ) (___)  (   )' |  |");
-			System.out.println(" |                                                    |");
-			System.out.println(" |____________________________________________________|");
+			System.out.println("      _____________________________________________________");
+			System.out.println("      | -___                        ___                    | ");
+			System.out.println("      | (   )                      (   )                   |");
+			System.out.println("      |  | |   ___  ___    .--.     | |   ___    ___  ___  |");
+			System.out.println("      |  | |  (   )(   )  /    \\    | |  (   )  (   )(   ) |");
+			System.out.println("      |  | |   | |  | |  |  .-. ;   | |  ' /     | |  | |  |");
+			System.out.println("      |  | |   | |  | |  |  |(___)  | |,' /      | |  | |  |");
+			System.out.println("      |  | |   | |  | |  |  |       | .  '.      | '  | |  |");
+			System.out.println("      |  | |   | |  | |  |  | ___   | | `. \\     '  `-' |  |");
+			System.out.println("      |  | |   | |  ; '  |  '(   )  | |   \\ \\     `.__. |  |");
+			System.out.println("      |  | |   ' `-'  /  '  `-' |   | |    \\ .    ___ | |  |");
+			System.out.println("      | (___)   '.__.'    `.__,'   (___ ) (___)  (   )' |  |");
+			System.out.println("      |                                                    |");
+			System.out.println("      |____________________________________________________|");
+
+			System.out.println("");
+			System.out.println("");
 
 
 
-			System.out.println("Hola, soy Lucky un bot de música.");
-			System.out.println("Ingresa un comando para comenzar: ");
-			System.out.println("!PLAY");
-			System.out.println("!LYRICS");
-			System.out.println("!STOP");
-			System.out.println("!INFO");
-			System.out.println("!HELP");
-			System.out.println("!NP");
-			System.out.println("!CL");
-			System.out.println("!AGAIN");
-			System.out.println("!LIST");
-			System.out.println("!EXIT");
-			System.out.println("!KARAOKE");
+			System.out.println("    ¡Hola, soy Lucky un bot de música!");
+			          imprimir("   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ");
+			System.out.println("     Ingresa un comando para comenzar: ");
+			System.out.println("");
+
+			System.out.println("       !PLAY");
+			System.out.println("       !LYRICS");
+			System.out.println("       !STOP");
+			System.out.println("       !INFO");
+			System.out.println("       !HELP");
+			System.out.println("       !NP");
+			System.out.println("       !CL");
+			System.out.println("       !AGAIN");
+			System.out.println("       !LIST");
+			System.out.println("       !EXIT");
+			System.out.println("       !KARAOKE");
+			System.out.println("");
+
 
 				
-			System.out.print("	Entrada$:");
+			System.out.print("Entrada$:");
 	}
 
 	public static void main(String[] args) {
