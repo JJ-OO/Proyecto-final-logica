@@ -76,9 +76,43 @@ public class Programa{
 		return str;
 	}
 
-	public static void menu(){
-			//menu
-		System.out.print("	Entrada$:");
+	public static void menu(){ 
+
+			//MENU
+
+			System.out.println(" _____________________________________________________");
+			System.out.println(" | -___                        ___                    | ");
+			System.out.println(" | (   )                      (   )                   |");
+			System.out.println(" |  | |   ___  ___    .--.     | |   ___    ___  ___  |");
+			System.out.println(" |  | |  (   )(   )  /    \\    | |  (   )  (   )(   ) |");
+			System.out.println(" |  | |   | |  | |  |  .-. ;   | |  ' /     | |  | |  |");
+			System.out.println(" |  | |   | |  | |  |  |(___)  | |,' /      | |  | |  |");
+			System.out.println(" |  | |   | |  | |  |  |       | .  '.      | '  | |  |");
+			System.out.println(" |  | |   | |  | |  |  | ___   | | `. \\     '  `-' |  |");
+			System.out.println(" |  | |   | |  ; '  |  '(   )  | |   \\ \\     `.__. |  |");
+			System.out.println(" |  | |   ' `-'  /  '  `-' |   | |    \\ .    ___ | |  |");
+			System.out.println(" | (___)   '.__.'    `.__,'   (___ ) (___)  (   )' |  |");
+			System.out.println(" |                                                    |");
+			System.out.println(" |____________________________________________________|");
+
+
+
+			System.out.println("Hola, soy Lucky un bot de música.");
+			System.out.println("Ingresa un comando para comenzar: ");
+			System.out.println("!PLAY");
+			System.out.println("!LYRICS");
+			System.out.println("!STOP");
+			System.out.println("!INFO");
+			System.out.println("!HELP");
+			System.out.println("!NP");
+			System.out.println("!CL");
+			System.out.println("!AGAIN");
+			System.out.println("!LIST");
+			System.out.println("!EXIT");
+			System.out.println("!KARAOKE");
+
+				
+			System.out.print("	Entrada$:");
 	}
 
 	public static void main(String[] args) {
@@ -104,43 +138,6 @@ public class Programa{
     		do{	
 				System.out.println();
 				menu();
-
-				System.out.println(" _____________________________________________________");
-				System.out.println(" | -___                        ___                    | ");
-				System.out.println(" | (   )                      (   )                   |");
-				System.out.println(" |  | |   ___  ___    .--.     | |   ___    ___  ___  |");
-				System.out.println(" |  | |  (   )(   )  /    \\    | |  (   )  (   )(   ) |");
-				System.out.println(" |  | |   | |  | |  |  .-. ;   | |  ' /     | |  | |  |");
-				System.out.println(" |  | |   | |  | |  |  |(___)  | |,' /      | |  | |  |");
-				System.out.println(" |  | |   | |  | |  |  |       | .  '.      | '  | |  |");
-				System.out.println(" |  | |   | |  | |  |  | ___   | | `. \\     '  `-' |  |");
-				System.out.println(" |  | |   | |  ; '  |  '(   )  | |   \\ \\     `.__. |  |");
-				System.out.println(" |  | |   ' `-'  /  '  `-' |   | |    \\ .    ___ | |  |");
-				System.out.println(" | (___)   '.__.'    `.__,'   (___ ) (___)  (   )' |  |");
-				System.out.println(" |                                                    |");
-				System.out.println(" |____________________________________________________|");
-
-
-
-				System.out.println("Hola, soy Lucky un bot de música.");
-				System.out.println("Ingresa un comando para comenzar: ");
-				System.out.println("!PLAY");
-				System.out.println("!LYRICS");
-				System.out.println("!STOP");
-				System.out.println("!INFO");
-				System.out.println("!HELP");
-				System.out.println("!NP");
-				System.out.println("!CL");
-				System.out.println("!AGAIN");
-				System.out.println("!LIST");
-				System.out.println("!EXIT");
-				System.out.println("!KARAOKE");
-
-
-
-
-
-
          	              								   
        			centinela = ConsoleInput.getString();
 
